@@ -4,7 +4,7 @@ const paths = {
   source: {
     scss: `${Config.sourceFolder}/**/scss/*.scss`,
     allScssComponents: `${Config.sourceFolder}/**/scss/**/*.scss`,
-    js: `${Config.sourceFolder}/**/js/*.*`,
+    js: `${Config.sourceFolder}'/{js,**/js}/*.js'`,
     jsEsBuild: `${Config.sourceFolder}/js/`,
     jsLibraries: `${Config.sourceFolder}/**/js/libs/*.*`,
     images: `${Config.sourceFolder}/**/img/**/*.{jpg,jpeg,png,gif,webp}`,

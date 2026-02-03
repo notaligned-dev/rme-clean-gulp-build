@@ -8,9 +8,7 @@ import babelPlugin from 'esbuild-plugin-babel';
 import fg from 'fast-glob';
 
 function getJsEntryPoints() {
-  const lele = fg.sync('src/assets/{js,**/js}/*.js');
-  console.log(lele);
-  return lele;
+  return fg.sync(paths.source.js);
 }
 
 function build() {
