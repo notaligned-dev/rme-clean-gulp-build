@@ -2,6 +2,8 @@
 
 [:ru: Русская версия](README.ru.md)
 
+Full project changelog is [available here :bookmark_tabs:](CHANGELOG.md)
+
 > [!NOTE] 
 > Build is in **beta stage**. APIs and structure may change slightly until the first stable release.
 
