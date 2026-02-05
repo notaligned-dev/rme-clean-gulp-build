@@ -1,0 +1,3 @@
+[submodule "src/rem-markup-engine-theme"]
+	path = src/rem-markup-engine-theme
+	url = https://github.com/notaligned-dev/rem-markup-engine-theme.git
