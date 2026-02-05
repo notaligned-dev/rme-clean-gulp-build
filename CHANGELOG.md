@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ### Changed
 
 - New RME theme submodule directory: `src/assets/theme` → `src/rem-markup-engine-theme`
+- Example source files replaces with `.gitkeep` to save folder structure
 
 ## [0.1-beta.1] — 2026-02-05
 
