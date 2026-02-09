@@ -22,15 +22,16 @@
   "type": "module",
   "main": "gulpfile.js",
   "scripts": {
-    "dev": "gulp dev",
-    "build": "gulp build",
-    "lint": "eslint src/assets/{js,*/js}/*.js"
+    "dev": "cross-env gulp dev",
+    "build": "cross-env gulp build",
+    "lint": "cross-env eslint src/assets/{js,*/js}/*.js"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",
     "@babel/preset-env": "^7.29.0",
     "browser-sync": "^3.0.4",
     "core-js": "^3.48.0",
+    "cross-env": "^10.1.0",
     "del": "^8.0.1",
     "esbuild": "^0.27.2",
     "esbuild-plugin-babel": "^0.2.3",

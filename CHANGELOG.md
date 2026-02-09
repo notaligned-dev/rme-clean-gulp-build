@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- Installed `cross-env` package for cross-environment scripts
+
 ### Changed
 
 - New RME theme submodule directory: `src/assets/theme` → `src/rem-markup-engine-theme`
