@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 - New RME theme submodule directory: `src/assets/theme` → `src/rem-markup-engine-theme`
 - Example source files replaces with `.gitkeep` to save folder structure
+- Gulp entry point (**breaking changes**)
 
 ## [0.1-beta.1] — 2026-02-05
 

@@ -26,6 +26,8 @@ const buildScriptsForDev = js.build;
 buildScriptsForDev.displayName = 'scripts:build:dev';
 const watchScripts = js.watchFiles;
 watchScripts.displayName = 'scripts:watch';
+const watchScriptsLibs = js.watchLibs;
+watchScripts.displayName = 'scripts:watchLibs';
 const buildImages = images.processFiles;
 buildImages.displayName = 'images:build';
 const watchImages = images.watchFiles;
@@ -68,7 +70,8 @@ const devProcess =
         startHotReloadServer,
         parallel(
             series(buildStylesForDev, watchStyles),
-            series(processScriptsLibs, buildScriptsForDev, watchScripts),
+            series(buildScriptsForDev, watchScripts),
+            series(processScriptsLibs, watchScriptsLibs),
             series(buildImages, watchImages),
             series(buildIcons, watchIcons),
             series(buildFonts, watchFonts),
@@ -78,4 +81,4 @@ const devProcess =
         )
     );
 
-export { devProcess as default, devProcess as dev, buildProcess as build };
+export { devProcess as dev, buildProcess as build };
