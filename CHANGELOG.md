@@ -12,9 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- `config.js` replaced with new configuration system (**Breaking changes**)
 - New RME theme submodule directory: `src/assets/theme` → `src/rem-markup-engine-theme`
 - Example source files replaces with `.gitkeep` to save folder structure
-- Gulp entry point
+- Gulp entry point (`gulpfile.js` is now a file and gulp folder renamed to `gulp`)
 - Path resolution variables for `browser-sync`
 
 ### Fixed
@@ -23,7 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Removed
 
-- Unused variables in `glp/globals/paths.js`
+- Unused variables in `gulp/globals/paths.js`
 
 ## [0.1-beta.1] — 2026-02-05
 

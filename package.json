@@ -24,7 +24,11 @@
   "scripts": {
     "dev": "cross-env gulp dev",
     "build": "cross-env gulp build",
-    "lint": "cross-env eslint src/assets/{js,*/js}/*.js"
+    "lint": "cross-env eslint src/assets/{js,*/js}/*.js",
+    "dev:rme-theme": "cross-env BUILD_CONFIG=rme-theme gulp dev",
+    "build:rme-theme": "cross-env BUILD_CONFIG=rme-theme gulp build",
+    "dev:custom": "cross-env BUILD_CONFIG=custom gulp dev",
+    "build:custom": "cross-env BUILD_CONFIG=custom gulp build"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",

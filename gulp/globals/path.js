@@ -1,16 +1,17 @@
-import Config from '../config.js';
+const configName = process.env.BUILD_CONFIG || 'default';
+const { default: config } = await import(`../config/${configName}.config.js`);
 
 const paths = {
   source: {
-    scss: `${Config.sourceFolder}/**/scss/*.scss`,
-    allScssComponents: `${Config.sourceFolder}/**/scss/**/*.scss`,
-    js: `${Config.sourceFolder}'/{js,**/js}/*.js'`,
-    jsEsBuild: `${Config.sourceFolder}/js/`,
-    jsLibraries: `${Config.sourceFolder}/**/js/libs/*.*`,
-    images: `${Config.sourceFolder}/**/img/**/*.{jpg,jpeg,png,gif,webp}`,
-    svgs: `${Config.sourceFolder}/**/img/**/*.svg`,
-    fonts: `${Config.sourceFolder}/**/fonts/**/*.*`,
-    video: `${Config.sourceFolder}/**/videos/**/*.*`,
+    scss: `${config.sourceFolder}/**/scss/*.scss`,
+    allScssComponents: `${config.sourceFolder}/**/scss/**/*.scss`,
+    js: `${config.sourceFolder}'/{js,**/js}/*.js'`,
+    jsEsBuild: `${config.sourceFolder}/js/`,
+    jsLibraries: `${config.sourceFolder}/**/js/libs/*.*`,
+    images: `${config.sourceFolder}/**/img/**/*.{jpg,jpeg,png,gif,webp}`,
+    svgs: `${config.sourceFolder}/**/img/**/*.svg`,
+    fonts: `${config.sourceFolder}/**/fonts/**/*.*`,
+    video: `${config.sourceFolder}/**/videos/**/*.*`,
     php: '*.php',
     html: `*.{html, htm}`
   },
@@ -18,11 +19,11 @@ const paths = {
     ToWatch: {
       html: '**/*.html',
       php: '**/*.php',
-      assets: `${Config.buildFolder}/**/*.*`
+      assets: `${config.buildFolder}/**/*.*`
     }
   },
-  sourceFolder: Config.sourceFolder,
-  buildFolder: Config.buildFolder
+  sourceFolder: config.sourceFolder,
+  buildFolder: config.buildFolder
 }
 
 export default paths;

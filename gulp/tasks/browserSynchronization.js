@@ -1,4 +1,5 @@
-import config from '../config.js';
+const configName = process.env.BUILD_CONFIG || 'default';
+const { default: config } = await import(`../config/${configName}.config.js`);
 import browserSync from 'browser-sync';
 import paths from '../globals/path.js';
 
