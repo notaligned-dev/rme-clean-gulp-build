@@ -14,10 +14,6 @@ const paths = {
     php: '*.php',
     html: `*.{html, htm}`
   },
-  destination: {
-    jsEsBuild: `${Config.buildFolder}/js/`,
-    jsEsBuildTheme: `${Config.buildFolder}/theme/js/`
-  },
   sourceFolder: Config.sourceFolder,
   buildFolder: Config.buildFolder
 }
