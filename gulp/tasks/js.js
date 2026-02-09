@@ -11,29 +11,35 @@ function getJsEntryPoints() {
   return fg.sync(paths.source.js);
 }
 
-function build() {
-  return esbuild.build({
-    entryPoints: getJsEntryPoints(),
-    bundle: true,
-    outbase: paths.sourceFolder,
-    outdir: paths.buildFolder + "/",
-    outExtension: { '.js': '.min.js' },
-    plugins: [babelPlugin({ filter: /\.[jt]sx?$/ })],
-    logLevel: 'info'
-  }).catch(() => process.exit(1));
+let jsContext;
+
+const dev_config = {
+  entryPoints: getJsEntryPoints(),
+  bundle: true,
+  outbase: paths.sourceFolder,
+  outdir: paths.buildFolder + "/",
+  outExtension: { '.js': '.min.js' },
+  plugins: [babelPlugin({ filter: /\.[jt]sx?$/ })],
+  logLevel: 'info'
+}
+
+const production_config = {
+  entryPoints: getJsEntryPoints(),
+  bundle: true,
+  outbase: paths.sourceFolder,
+  outdir: paths.buildFolder + "/",
+  outExtension: { '.js': '.min.js' },
+  minify: true,
+  plugins: [babelPlugin({ filter: /\.[jt]sx?$/ })],
+  logLevel: 'info'
+}
+
+async function build() {
+  await esbuild.build(dev_config).catch(() => process.exit(1));
 }
 
 function buildForProduction() {
-  return esbuild.build({
-    entryPoints: getJsEntryPoints(),
-    bundle: true,
-    outbase: paths.sourceFolder,
-    outdir: paths.buildFolder + "/",
-    outExtension: { '.js': '.min.js' },
-    minify: true,
-    plugins: [babelPlugin({ filter: /\.[jt]sx?$/ })],
-    logLevel: 'info'
-  }).catch(() => process.exit(1));
+  return esbuild.build(production_config).catch(() => process.exit(1));
 }
 
 function processLibs() {
@@ -42,8 +48,13 @@ function processLibs() {
     .pipe(dest(paths.buildFolder));
 }
 
-function watchFiles() {
-  return watch(paths.source.js, series(build, browserHotReload));
+export async function watchFiles() {
+  jsContext = await esbuild.context(dev_config);
+  await jsContext.watch();
 }
 
-export default { build, buildForProduction, processLibs, watchFiles };
+export function watchLibs() {
+  return watch(paths.source.jsLibraries, processLibs);
+}
+
+export default { build, buildForProduction, processLibs, watchFiles, watchLibs };

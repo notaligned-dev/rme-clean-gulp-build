@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Example source files replaces with `.gitkeep` to save folder structure
 - Gulp entry point (**breaking changes**)
 
+### Fixed
+
+- Scripts watch process
+
 ## [0.1-beta.1] — 2026-02-05
 
 ### Fixed
