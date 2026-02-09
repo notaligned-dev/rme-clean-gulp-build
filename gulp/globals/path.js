@@ -14,6 +14,13 @@ const paths = {
     php: '*.php',
     html: `*.{html, htm}`
   },
+  browserSync: {
+    ToWatch: {
+      html: '**/*.html',
+      php: '**/*.php',
+      assets: `${Config.buildFolder}/**/*.*`
+    }
+  },
   sourceFolder: Config.sourceFolder,
   buildFolder: Config.buildFolder
 }

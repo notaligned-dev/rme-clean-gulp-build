@@ -1,5 +1,6 @@
 import config from '../config.js';
 import browserSync from 'browser-sync';
+import paths from '../globals/path.js';
 
 function LaunchReloadProxy (done) {
   let browserSyncConfig = {
@@ -24,7 +25,7 @@ function LaunchReloadProxy (done) {
         "*.txt"
       ]
     };
-    browserSyncConfig.files = "**/*.html, **/*.php, assets/**/*.*";
+    browserSyncConfig.files = `${paths.browserSync.ToWatch.html}, ${paths.browserSync.ToWatch.php}, ${paths.browserSync.ToWatch.assets}`;
   }
   browserSync.init(browserSyncConfig);
   done();
