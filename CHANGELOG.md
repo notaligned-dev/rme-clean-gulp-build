@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+- Nothing here right
+
+## [0.2-beta.0] — 2026-02-10
+
 ### Added
 
 - Installed `cross-env` package for cross-environment scripts
