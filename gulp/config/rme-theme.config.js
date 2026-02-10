@@ -1,4 +1,4 @@
-import { baseConfig } from './base.config.js';
+import { baseConfig } from '../globals/base.config.js';
 
 export default {
   ...baseConfig,
