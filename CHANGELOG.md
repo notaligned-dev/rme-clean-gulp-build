@@ -6,7 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
-- Nothing here right now
+### Fixed
+
+- JS Libraries output path
 
 ## [0.2-beta.0] — 2026-02-10
 

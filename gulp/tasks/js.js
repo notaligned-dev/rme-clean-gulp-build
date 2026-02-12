@@ -43,7 +43,7 @@ function buildForProduction() {
 }
 
 function processLibs() {
-  return src(paths.source.jsLibraries)
+  return src(paths.source.jsLibraries, { base: paths.sourceFolder })
     .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
     .pipe(dest(paths.buildFolder));
 }
