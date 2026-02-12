@@ -6,7 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
-- Nothing here right now
+### Changed
+
+- `.php` and `.html` files from subfolders added to browser hot-reload
 
 ## [0.2-beta.1] — 2026-02-12
 

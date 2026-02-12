@@ -12,8 +12,8 @@ const paths = {
     svgs: `${config.sourceFolder}/img/**/*.svg`,
     fonts: `${config.sourceFolder}/fonts/**/*.*`,
     video: `${config.sourceFolder}/videos/**/*.*`,
-    php: '*.php',
-    html: `*.{html, htm}`
+    php: '**/*.php',
+    html: `**/*.{html, htm}`
   },
   browserSync: {
     ToWatch: {
