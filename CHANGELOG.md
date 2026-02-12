@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 ### Added
 
 - `gulp-if` package (condition based pipelines)
+- new configuration option: `webp` convertion switch
 
 ### Fixed
 
