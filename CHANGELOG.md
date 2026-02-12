@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- `gulp-if` package (condition based pipelines)
+
 ### Fixed
 
 - JS Libraries output path
