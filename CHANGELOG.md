@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+- Nothing here right now
+
+## [0.2-beta.1] — 2026-02-12
+
 ### Added
 
 - `gulp-if` package (condition based pipelines)

@@ -97,10 +97,11 @@ Project uses [Rem Markup Engine Theme](https://github.com/notaligned-dev/rem-mar
 ## Configuration Options
 
 All configuration properties (listed in `./gulp/globals/base.config.js`):
-1. `sourceFolder` — folder for source assets
-2. `buildFolder` — folder for output assets
-3. `isProxy` — set to `true` if you already have local server running and want to use browser hot reload on it
-4. `localWebsiteURL` — works only with `isProxy`: `true`. Insert your local server website URL
+- `sourceFolder` — folder for source assets
+- `buildFolder` — folder for output assets
+- `isProxy` — set to `true` if you already have local server running and want to use browser hot reload on it
+- `localWebsiteURL` — works only with `isProxy`: `true`. Insert your local server website URL
+- `isWebpConvertion` — enabling/disabling convertion to `webp`
 
 ## Folder Structure
 
